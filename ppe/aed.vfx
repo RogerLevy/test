@@ -4,7 +4,7 @@ require sys/filetypes.vfx
 
 \ - Editor variables
 PUBLIC
-obj animations
+obj animations { }
 reference aed
 
 PRIVATE

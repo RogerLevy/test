@@ -5,7 +5,7 @@ require animate.vfx
 require obj/tile.vfx
 require lib/files.vfx
 
-obj misc \ temporary...
+obj misc { } \ temporary...
 
 \ - Palette stuff
 : draw-paletted-tilemap draw> ?paletted tilemap -shader ;
