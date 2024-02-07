@@ -1,3 +1,4 @@
+require ppe.vfx
 require obj/bouncer.vfx
 require stage.vfx
 

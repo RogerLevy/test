@@ -1,10 +1,6 @@
-faster
+cwd ../vfxland4   require vfxland4.vfx   cwd ../prg
 
 \ - Window
-cwd ../vfxland4
-require vfxland4.vfx 
-cwd ../prg
-
 3e fvalue zoom
 [defined] release [if]
     -1 -1  1 window
