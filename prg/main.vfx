@@ -1,7 +1,9 @@
 faster
 
 \ - Window
-require lib/window.vfx
+cwd ../vfxland4
+require vfxland4.vfx 
+cwd ../prg
 
 3e fvalue zoom
 [defined] release [if]
@@ -13,10 +15,22 @@ require lib/window.vfx
 
 vfx-hwnd 0 -10 0  1920 2 / 20 +  520 $40 SetWindowPos drop
 
+\ - Tools
+cwd ../ppe
+require ppe.vfx
+[undefined] release [if] 
+    ws2 { require aed.vfx }
+[then]
+cwd ../prg
+
 \ - Game
-[undefined] release [if] include tools.vfx [then]
 include notzelda.vfx
-[undefined] release [if] include test.vfx [then]
+include balltest.vfx
+include paltest.vfx
+[undefined] release [if]
+    m: hi ." hello" ;
+    :: *sam hi ." konnichiwa" ;
+[then]
 
 \ - Enter main loop
 go

@@ -1,4 +1,3 @@
-require engine.vfx
 require obj/bouncer.vfx
 require stage.vfx
 
@@ -19,9 +18,6 @@ misc {
 : scene2 bg0 { 1-1_g1.tm mimic } ;
 
 scene1
-
-include balltest.vfx
-include paltest.vfx
 
 \ Sam R. I.
 fget obj/sam

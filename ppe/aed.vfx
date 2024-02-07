@@ -112,64 +112,62 @@ c: *editor
 
 
 \ - Editor layout
-workspace {
-    0 0 at *aed named aed {
-        0 0 at *toolbox { ` AED`
-            0 32 at *generic { [bolted]
-                0 0 at *toolbox { ` Editor`
-                    0 32 at *spanel { 384. 384. w v! [bolted]
-                        0 0 at *editor named editor { 128. 128. w v! 3. 3. sx 2! [bolted]
-                            64 64 at *generic named anmc { [bolted] }
-                        }
+0 0 at *aed named aed {
+    0 0 at *toolbox { ` AED`
+        0 32 at *generic { [bolted]
+            0 0 at *toolbox { ` Editor`
+                0 32 at *spanel { 384. 384. w v! [bolted]
+                    0 0 at *editor named editor { 128. 128. w v! 3. 3. sx 2! [bolted]
+                        64 64 at *generic named anmc { [bolted] }
                     }
                 }
-                winw 384 - 0 at *toolbox { ` Preview`
-                    0 32 at *spanel { 384. 384. w v! [bolted]
-                        0 0 at *preview named preview { [bolted]
-                            64 64 at *pspr named pspr { [bolted] } 
-                        }
+            }
+            winw 384 - 0 at *toolbox { ` Preview`
+                0 32 at *spanel { 384. 384. w v! [bolted]
+                    0 0 at *preview named preview { [bolted]
+                        64 64 at *pspr named pspr { [bolted] } 
                     }
                 }
-                16 winh 2 / 40 + at *toolbox { ` Tiles`
-                    0 32 at *generic {
-                        0 0 at *panel { 40. 256. w v! [bolted]
-                            button: 1x 1. 1. tsel -> parent @ -> sx v! ; <nr 
-                            button: 2x 2. 2. tsel -> parent @ -> sx v! ; <nr
-                        }
-                        70 0 at *spanel { 256. 256. w v! [bolted]
-                            0 0 at *tsel named tsel { [bolted] }
-                        }
+            }
+            16 winh 2 / 40 + at *toolbox { ` Tiles`
+                0 32 at *generic {
+                    0 0 at *panel { 40. 256. w v! [bolted]
+                        button: 1x 1. 1. tsel -> parent @ -> sx v! ; <nr 
+                        button: 2x 2. 2. tsel -> parent @ -> sx v! ; <nr
+                    }
+                    70 0 at *spanel { 256. 256. w v! [bolted]
+                        0 0 at *tsel named tsel { [bolted] }
                     }
                 }
-                256 150 + winh 2 / 40 + at *toolbox { ` Tools`
-                    0 32 at *panel { 200. 200. w v! [bolted]
-                        8 8 at
-                        *button { ` snapping toggle` }
-                        \ *button { ` refresh-tbank` [nr] }
-                        *button { ` 0 bank` }
-                        *button { ` 1 bank` }
-                        *button { ` 2 bank` }
-                        *button { ` 3 bank` [nr] }
-                        *button { ` 4 bank` }
-                        *button { ` 5 bank` }
-                        *button { ` 6 bank` }
-                        *button { ` 7 bank` [nr] }
-                        *button { ` slowest` }
-                        *button { ` slow` }
-                        *button { ` normal` }
-                        *button { ` fast` }
-                        *button { ` fastest` [nr] }
-                        *button { ` narrower` }
-                        *button { ` wider` }
-                        *button { ` shorter` }
-                        *button { ` taller` }
-                    }
+            }
+            256 150 + winh 2 / 40 + at *toolbox { ` Tools`
+                0 32 at *panel { 200. 200. w v! [bolted]
+                    8 8 at
+                    *button { ` snapping toggle` }
+                    \ *button { ` refresh-tbank` [nr] }
+                    *button { ` 0 bank` }
+                    *button { ` 1 bank` }
+                    *button { ` 2 bank` }
+                    *button { ` 3 bank` [nr] }
+                    *button { ` 4 bank` }
+                    *button { ` 5 bank` }
+                    *button { ` 6 bank` }
+                    *button { ` 7 bank` [nr] }
+                    *button { ` slowest` }
+                    *button { ` slow` }
+                    *button { ` normal` }
+                    *button { ` fast` }
+                    *button { ` fastest` [nr] }
+                    *button { ` narrower` }
+                    *button { ` wider` }
+                    *button { ` shorter` }
+                    *button { ` taller` }
                 }
-                390 0 at *toolbox { ` Status`
-                    0 32 at *status { } 
-                }     
-            }               
-        }
+            }
+            390 0 at *toolbox { ` Status`
+                0 32 at *status { } 
+            }     
+        }               
     }
 }
 

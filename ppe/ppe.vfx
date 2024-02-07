@@ -1,13 +1,9 @@
-cwd ../vfxland4
-require vfxland.vfx
-cwd ../ppe
+require lib/shader.vfx
+require palette.vfx
 require obj/tilemap.vfx
 require animate.vfx
 require obj/tile.vfx
 require lib/files.vfx
-require sys/task.vfx
-require lib/shader.vfx
-require palette.vfx
 
 obj misc \ temporary...
 

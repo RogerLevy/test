@@ -1,6 +1,1 @@
-require engine.vfx 
 
-\ - AED
-fget tool/aed
-aed ws2 push
-repl off

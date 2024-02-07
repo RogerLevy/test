@@ -19,6 +19,6 @@ c: *camera physics> subject ?dup if impose else vx v@ 2delta* x v+! then   track
 stage clear
 stage {
     0 0 at *tilemap named bg0 { [bolted] }
-    container: actors { }
-    0 0 at *camera { }
+    container: actors { [locked] }
+    0 0 at *camera { [locked] }
 }
