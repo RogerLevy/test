@@ -10,22 +10,21 @@ obj misc { } \ temporary...
 \ - Palette stuff
 : draw-paletted-tilemap draw> ?paletted tilemap -shader ;
 
-\ - Game
+\ - Game object
 : matte x v@ 2p>s gamew zoom sf* gameh zoom sf* clip! ;
 : center
     winw 2 /  gamew zoom sf* 2 / -
         winh 64 - 2 /  gameh zoom sf* 2 / -  2s>p x v!
     zoom f>p dup sx v!
 ;
-: game-act act> center ;
-: game-draw draw> matte 0e 0e 0e 1e al_clear_to_color ;
-c: *game game-act game-draw ;
+c: *game act> center draw> matte 0e 0e 0e 1e al_clear_to_color ;
 ws1 {    
     *game named game {
         *generic named stage { }
     }
 }
 
+\ Directional stuff
 0 constant right_
 1 constant up_
 2 constant left_
@@ -39,7 +38,7 @@ create walkv 1. , 0 ,   0 , -1. ,   -1. , 0 ,   0 , 1. ,
 : csv-wh (csv-wh) here v@ ;
 \ : csv-cells! h[ csv-cells, ]h ;
 
-\ - Z offset
+\ - Z-offset sprites
 motif var z +basis
 : zanimate
     animate   draw> 

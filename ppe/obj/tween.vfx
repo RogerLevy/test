@@ -37,7 +37,7 @@ motif var dir var adr var xt var ease var n1 var n2 var s1 var spd
 : ?done s1 @ 1. >= if xt @ parent @ { ?execute } me kill then ;
 : 1tween act> step curval adr @ ! ?done ;
 c: *tween act> me kill ;
-: len! 1. swap p/ framerate f>p p/ spd ! ;
+: len! 1. swap p/ framerate s>p p/ spd ! ;
 
 \ - Tweening
 ( ease dir adr n2. len. - tween )
