@@ -21,8 +21,8 @@ cwd ../prg
 
 \ - Game
 include notzelda.vfx
-include balltest.vfx
-include paltest.vfx
+include balltest.vfx 
+include paltest.vfx wow off
 [undefined] release [if]
     m: hi ." hello" ;
     :: *sam hi ." konnichiwa" ;
