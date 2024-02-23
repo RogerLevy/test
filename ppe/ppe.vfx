@@ -69,6 +69,3 @@ motif var dir +basis
 
 \ - Items
 
-\ - Game will live in heap memory
-256 mb allocate throw dup constant gamebase dp !
-: unused gamebase 256 mb + here - ;

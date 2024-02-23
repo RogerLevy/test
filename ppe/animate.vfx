@@ -1,7 +1,5 @@
-motif var tio var tl var spd var ac var af +basis \ add animation capability to everything
-: ?+ac delta spd @ p* ac +! ;
-: keyframe { me nth-child { draw } } ;
-: animation tio @ tileofs !   ac @ p>s tl @ keyframe   halt @ ?; ?+ac ;
+motif var tio var tl var spd var ac +basis 
+: animation tio @ tileofs !   ac @ p>s tl @ nth-child { draw }   halt @ ?; delta spd @ p* ac +! ;
 : animate spd ! tl ! draw> animation ;
 : timeline-ser ser> tio ? ." tio ! " ;
 c: *timeline timeline-ser [locked] ;

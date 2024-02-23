@@ -14,18 +14,22 @@ vfx-hwnd 0 -10 0  1920 2 / 20 +  520 $40 SetWindowPos drop
 \ - Engine and Tools
 cwd ../ppe
 require ppe.vfx
-[undefined] release [if] 
+[defined] release not [if] 
     ws2 { require aed.vfx }
 [then]
 cwd ../prg
 
+\ - Game will live in heap memory
+256 mb allocate throw dup constant gamebase dp !
+: unused gamebase 256 mb + here - ;
+
 \ - Game
 include notzelda.vfx
+
+[undefined] release [if]
 include balltest.vfx 
 include paltest.vfx wow off
-[undefined] release [if]
-    m: hi ." hello" ;
-    :: *sam hi ." konnichiwa" ;
+include misctests.vfx
 [then]
 
 \ - Enter main loop
